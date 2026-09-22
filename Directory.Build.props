@@ -1,0 +1,3 @@
+<Project>
+  <Import Project="MSUScripter.Local.props" Condition="Exists('MSUScripter.Local.props')" />
+</Project>

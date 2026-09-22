@@ -28,6 +28,16 @@ A cross platform application built for creating MSUs, PCMs, and related files fo
 
 Having problems? Please feel free to [post an Issue on GitHub](https://github.com/MattEqualsCoder/MSUScripter/issues). You can also reach out on some of the main randomizer discords. If encountering a crash, please include the latest log file located at %localappdata%/MSUScripter on Windows or ~/.local/share/MSUScripter/Logs on Linux.
 
+## Local MSU type testing
+
+With `ALttPMSUShuffler`, `MSURandomizer`, and `MSUScripter` cloned as sibling directories, run:
+
+```powershell
+.\Setup\BuildLocalMsuRandomizerPackage.ps1
+```
+
+The script builds `msu_types.json` with the config repository's existing bundler, tests and packs `MSURandomizerLibrary`, restores that local NuGet package into MSUScripter, and builds the solution. It writes the ignored `MSUScripter.Local.props` and `.local-packages` files so subsequent IDE and command-line builds keep using that package. Delete `MSUScripter.Local.props` and restore the solution to return to the published package.
+
 ## Future
 
 As of version 5.0.0, I do not predict making any future updates outside of bug fixes and upgrades to avoid things getting out of date. There are some new features in the [issues list](https://github.com/MattEqualsCoder/MSUScripter/issues) however if anyone is interested in making contributions.

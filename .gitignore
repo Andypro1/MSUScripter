@@ -197,6 +197,8 @@ PublishScripts/
 *.nupkg
 # NuGet Symbol Packages
 *.snupkg
+.local-packages/
+MSUScripter.Local.props
 # The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
